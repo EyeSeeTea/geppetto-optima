@@ -5,14 +5,14 @@ define(function (require) {
         var link = document.createElement("link");
         link.type = "text/css";
         link.rel = "stylesheet";
-        link.href = "geppetto/extensions/geppetto-neuron/css/material.css";
+        link.href = "geppetto/extensions/geppetto-optima/css/optima.css";
         document.getElementsByTagName("head")[0].appendChild(link);
 
 
         var link = document.createElement("link");
         link.type = "text/css";
         link.rel = "stylesheet";
-        link.href = "geppetto/extensions/geppetto-neuron/css/neuron.css";
+        link.href = "geppetto/extensions/geppetto-optima/css/material.css";
         document.getElementsByTagName("head")[0].appendChild(link);
 
         //Logo initialization
@@ -97,7 +97,7 @@ define(function (require) {
                 // Load Neuron Basic GUI
                 // FIXME This is NEURON specific and should move elsewhere
                 var kernel = IPython.notebook.kernel;
-	        kernel.execute('import optima');
+	            kernel.execute('from optima_ui import optima');
                 kernel.execute('optima.init()');
 
                 // kernel.execute('from geppettoJupyter.geppetto_comm import GeppettoJupyterModelSync');
